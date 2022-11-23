@@ -36,11 +36,9 @@ const News = (props) => {
   }, []);
 
   const fetchMoreData = async () => {
-    const url = `https://newsapi.org/v2/top-headlines?country=${
-      props.country
-    }&category=${props.category}&apiKey=fe415a344cea4034bef041fac54c308c&page=${
-      page + 1
-    }&pageSize=${props.pageSize}`;
+    const url = `https://newsapi.org/v2/top-headlines?country=${props.country
+      }&category=${props.category}&apiKey=fe415a344cea4034bef041fac54c308c&page=${page + 1
+      }&pageSize=${props.pageSize}`;
     console.log("fetchMoreData==>>>", url);
     setPage(page + 1);
     let data = await fetch(url);
